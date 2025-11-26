@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<!-- Define o tipo de documento como HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define o idioma principal da página -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Suporta acentos e caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site se ajustar ao tamanho da tela (responsivo) -->
+
+    <title>Caça ao Tesouro Espacial</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importa o arquivo de estilos CSS -->
+</head>
+
+<body>
+
+    <div id="game-container">
+        <!-- Contêiner principal do jogo -->
+
+        <button id="dashboardButton" 
+            style="position: absolute; top: 10px; left: 10px; z-index: 1000; display: none;">
+            <!-- Botão do painel de recordes (por padrão invisível) -->
+            Painel de Recordes 📊
+        </button>
+
+        <div id="info-bar">
+            <!-- Barra superior onde ficam pontuação e vidas -->
+
+            <div id="score">Pontos: 0</div>
+            <!-- Elemento que exibe a pontuação atual -->
+
+            <div id="lives">Vidas: 5</div>
+            <!-- Elemento que exibe as vidas restantes -->
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <!-- Canvas onde todo o jogo é desenhado (nave, inimigos, itens etc.) -->
+
+        <div id="overlay" class="active">
+            <!-- Tela de início do jogo (fica visível antes de clicar em "Iniciar") -->
+
+            <h1>Caça ao Tesouro Espacial</h1>
+            <!-- Título do jogo -->
+
+            <p>Use as setas do teclado ou o mouse para controlar a nave.</p>
+            <!-- Texto explicativo -->
+
+            <button id="startButton">Iniciar Jogo</button>
+            <!-- Botão para começar o jogo -->
+        </div>
+
+        <div id="loginPanel" class="overlay active">
+            <!-- Tela de login que aparece antes de tudo (obrigatória para jogar) -->
+
+            <h1>Bem-vindo! Faça Login para Jogar</h1>
+            <!-- Título da tela de login -->
+
+            <input type="text" id="usernameInput" placeholder="Digite seu nome (máx 10 letras)">
+            <!-- Campo para digitar o nome do jogador -->
+
+            <button id="loginButton">Entrar e Jogar</button>
+            <!-- Botão que confirma o nome e libera o jogo -->
+            
+            <div id="controlsInfo" style="text-align: center; margin-top: 20px;">
+                <!-- Espaço reservado para instruções sobre os controles -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+    <!-- Importa o JavaScript responsável pela lógica do jogo -->
+
+</body>
+</html>
