@@ -35,10 +35,10 @@ let cameraShakeTimer = 0; // 💥 NOVO: Variável para controlar o tremor da tel
 
 
 // --- CARREGAMENTO DE SONS ---
-const hitSound = new Audio('/public/sound/Colisao.mp3');
-const starSound = new Audio('/public/sound/Estrela-Coletada.mp3');
-const deathSound = new Audio('/public/sound/Morte.mp3');
-const laserSound = new Audio('/public/sound/Laser.mp3');
+const hitSound = new Audio('public/sound/Colisao.mp3');
+const starSound = new Audio('public/sound/Estrela-Coletada.mp3');
+const deathSound = new Audio('public/sound/Morte.mp3');
+const laserSound = new Audio('public/sound/Laser.mp3');
 
 // CORREÇÃO DE PERFORMANCE: Clona o áudio para tocar o som de forma rápida
 function playSound(audioElement) {
@@ -53,11 +53,11 @@ function playSound(audioElement) {
 
 // --- CARREGAMENTO DE IMAGENS ---
 const playerImg = new Image();
-playerImg.src = '/public/textures/Nave.png';
+playerImg.src = 'public/textures/Nave.png';
 const meteorImg = new Image();
-meteorImg.src = '/public/textures/Meteoro.png';
+meteorImg.src = 'public/textures/Meteoro.png';
 const starImg = new Image();
-starImg.src = '/public/textures/Estrela.png';
+starImg.src = 'public/textures/Estrela.png';
 
 let assetsLoaded = false;
 let imagesToLoad = 3;
@@ -846,4 +846,5 @@ dashboardButton.addEventListener('click', showDashboard);
 // Estado inicial 
 overlay.classList.add('active');
 startButton.textContent = 'Carregando Imagens...';
+
 loginButton.textContent = 'Carregando Imagens...';
